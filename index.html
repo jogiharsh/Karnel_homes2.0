@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARNEL HOMES | Luxury Custom Home Builder Sydney</title>
+    <meta name="description" content="KARNEL HOMES specializes in bespoke new luxury homes, architectural knockdown rebuilds, and premium duplexes across Sydney. Founded by Sandeep Singh.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.karnelhomes.com.au">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.karnelhomes.com.au">
+    <meta property="og:title" content="KARNEL HOMES | Luxury Custom Home Builder Sydney">
+    <meta property="og:description" content="Architect-designed custom homes, built with clarity and care across Sydney.">
+    <meta property="og:image" content="/images/project1.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+      "name": "KARNEL HOMES",
+      "image": "/images/project1.jpg",
+      "telephone": "0434 289 857",
+      "email": "info@karnelhomes.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "322 Abell Road",
+        "addressLocality": "Melonba",
+        "addressRegion": "NSW",
+        "postalCode": "2765",
+        "addressCountry": "AU"
+      },
+      "url": "https://www.karnelhomes.com.au",
+      "priceRange": "$$$$"
+    }
+    </script>
+
+    <style>
+        /* --- DESIGN DNA & DESIGN SYSTEM --- */
+        :root {
+            --bg-primary: #F5F4F0;
+            --bg-secondary: #F7F7F7;
+            --text-main: #1C2022;
+            --text-muted: #6E767A;
+            --accent: #C5A880;
+            --accent-hover: #A38760;
+            --white: #FFFFFF;
+            --glass: rgba(255, 255, 255, 0.75);
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-body);
+        }
+
+        body {
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        p {
+            font-weight: 300;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .section-padding {
+            padding: 120px 8%;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            will-change: transform, opacity;
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            min-width: 190px;
+            min-height: 48px;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary { background-color: var(--text-main); color: var(--white); }
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translate3d(0, -4px, 0);
+            box-shadow: 0 12px 24px rgba(197, 168, 128, 0.2);
+        }
+
+        .btn-secondary { border: 1px solid var(--text-main); color: var(--text-main); background: transparent; }
+        .btn-secondary:hover { background-color: var(--text-main); color: var(--white); transform: translate3d(0, -4px, 0); }
+
+        /* --- STICKY NAVIGATION HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            background-color: transparent;
+            padding: 30px 8%;
+        }
+
+        header.scrolled {
+            background-color: var(--white);
+            padding: 15px 8%;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+        }
+
+        .nav-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--text-main));
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1800px; margin: 0 auto; }
+        .logo { font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 0.1em; text-decoration: none; color: var(--text-main); font-weight: 600; transition: var(--transition-fast); }
+        header:not(.scrolled) .nav-links a { color: var(--text-main); }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { text-decoration: none; font-family: var(--font-body); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-main); position: relative; padding: 8px 0; transition: var(--transition-fast); }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background-color: var(--accent); transition: var(--transition-fast); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .burger { display: none; cursor: pointer; background: transparent; border: none; z-index: 1002; padding: 10px; }
+        .burger div { width: 25px; height: 2px; background-color: var(--text-main); margin: 5px; transition: var(--transition-fast); }
+
+        .nav-menu-mobile { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--white); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 30px; list-style: none; transition: var(--transition-smooth); z-index: 1001; }
+        .nav-menu-mobile.open { right: 0; }
+        .nav-menu-mobile a { font-family: var(--font-display); font-size: 2rem; text-decoration: none; color: var(--text-main); transition: var(--transition-fast); }
+
+        /* --- HERO SECTION (BRIGHT SUNNY EXTERIOR ARCHITECTURE) --- */
+        #hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; padding: 0 20px; }
+        
+        .hero-bg { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            /* Premium minimal sand plaster architecture exterior - bright & sunny summer light */
+            background: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 100%), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center; 
+            background-size: cover; 
+            animation: panZoom 25s infinite alternate ease-in-out; 
+            z-index: 1; 
+        }
+        
+        .hero-contrast-filter {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            backdrop-filter: brightness(0.96) contrast(1.01);
+            -webkit-backdrop-filter: brightness(0.96) contrast(1.01);
+            z-index: 2;
+        }
+
+        @keyframes panZoom { 0% { transform: scale(1.0); } 100% { transform: scale(1.06); } }
+        
+        .hero-content { position: relative; z-index: 3; max-width: 1050px; color: var(--text-main); }
+        .hero-content h1 { 
+            color: var(--text-main); 
+            font-size: clamp(2.5rem, 5.2vw, 5rem); 
+            margin-bottom: 26px; 
+            font-weight: 400; 
+            letter-spacing: -0.01em;
+            text-shadow: 0 10px 40px rgba(255, 255, 255, 0.95), 0 2px 4px rgba(28, 32, 34, 0.05); 
+        }
+        .hero-content p { 
+            color: #1A1E20; 
+            font-size: clamp(1.15rem, 1.6vw, 1.45rem); 
+            margin-bottom: 45px; 
+            font-family: var(--font-display); 
+            font-style: italic; 
+            font-weight: 600; 
+            letter-spacing: 0.02em;
+            text-shadow: 0 4px 20px rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-ctas { display: flex; gap: 20px; justify-content: center; }
+        .hero-ctas .btn-secondary { border-color: var(--text-main); color: var(--text-main); background-color: rgba(255,255,255,0.35); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+        .hero-ctas .btn-secondary:hover { background-color: var(--text-main); color: var(--white); }
+        
+        .scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 3; animation: bounce 2s infinite; background: transparent; border: none; cursor: pointer; }
+        .scroll-indicator svg { fill: var(--text-main); width: 30px; height: 30px; }
+
+        /* --- ABOUT US SECTION (SANDEEP SINGH) --- */
+        #about { background-color: var(--bg-secondary); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1600px; margin: 0 auto; }
+        .about-image { position: relative; overflow: hidden; height: 600px; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.04); }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; }
+        .about-content h2 { font-size: clamp(2.2rem, 3.5vw, 3.2rem); margin-bottom: 25px; }
+        .about-content .founder-title { font-family: var(--font-body); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); font-weight: 600; display: block; margin-bottom: 20px; }
+        .about-content p { font-size: 1.1rem; margin-bottom: 25px; line-height: 1.8; }
+
+        /* --- INTRO SECTION --- */
+        .intro-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: center; max-width: 1600px; margin: 0 auto; }
+        .intro-text h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); margin-bottom: 30px; }
+        .intro-text p { font-size: 1.15rem; margin-bottom: 20px; }
+        .intro-img-wrapper { overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+        .intro-img-wrapper img { width: 100%; height: auto; display: block; }
+
+        /* --- SERVICES SECTION --- */
+        #services { background-color: var(--bg-secondary); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 80px auto; }
+        .section-header h2 { font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 15px; }
+        .services-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto; }
+        .service-card { position: relative; background: var(--white); border-radius: 4px; overflow: hidden; padding: 50px 35px; min-height: 420px; display: flex; flex-direction: column; justify-content: flex-end; z-index: 1; transition: var(--transition-smooth); box-shadow: 0 10px 40px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.03); }
+        .service-card:nth-child(1) { grid-column: span 3; }
+        .service-card:nth-child(2) { grid-column: span 3; }
+        .service-card:nth-child(3) { grid-column: span 2; }
+        .service-card:nth-child(4) { grid-column: span 2; }
+        .service-card:nth-child(5) { grid-column: span 2; }
+        .service-card-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: -2; transition: var(--transition-smooth); }
+        .service-card::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(28,32,34,0.1) 0%, rgba(28,32,34,0.85) 100%); z-index: -1; }
+        .service-icon { width: 44px; height: 44px; margin-bottom: auto; fill: var(--accent); }
+        .service-card h3 { color: var(--white); font-size: 1.8rem; margin-bottom: 15px; }
+        .service-card p { color: rgba(255,255,255,0.8); font-size: 0.95rem; transform: translate3d(0, 15px, 0); opacity: 0; transition: var(--transition-smooth); }
+        .service-card:hover { transform: translate3d(0, -8px, 0); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .service-card:hover .service-card-bg { transform: scale(1.06); }
+        .service-card:hover p { transform: translate3d(0, 0, 0); opacity: 1; }
+
+        /* --- LUXURY 15-PROJECT SLIDER / CAROUSEL --- */
+        #portfolio { background-color: var(--bg-primary); position: relative; overflow: hidden; }
+        .slider-control-container { display: flex; justify-content: space-between; align-items: center; max-width: 1600px; margin: 0 auto 40px auto; }
+        .slider-arrows { display: flex; gap: 15px; }
+        .slider-arrow { width: 54px; height: 54px; border: 1px solid rgba(0,0,0,0.1); background: var(--white); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-fast); border-radius: 50%; }
+        .slider-arrow:hover { background: var(--text-main); border-color: var(--text-main); }
+        .slider-arrow:hover svg { fill: var(--white); }
+        .slider-arrow svg { width: 20px; height: 20px; fill: var(--text-main); transition: var(--transition-fast); }
+        
+        .project-slider-viewport { width: 100%; overflow: hidden; padding: 20px 0 40px 0; }
+        .project-slider-track { display: flex; gap: 40px; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; padding-left: 8%; }
+        
+        .project-slide-card { flex: 0 0 480px; background: var(--white); border-radius: 0; overflow: hidden; box-shadow: 0 15px 45px rgba(0,0,0,0.03); display: flex; flex-direction: column; transition: var(--transition-smooth); border: 1px solid #ECEEEF; }
+        .project-slide-card:hover { transform: translate3d(0, -10px, 0); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        
+        .proj-card-img-wrap { width: 100%; height: 320px; overflow: hidden; position: relative; background-color: #F0F2F3; }
+        .proj-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth); }
+        .project-slide-card:hover .proj-card-img-wrap img { transform: scale(1.04); }
+        
+        .proj-card-details { padding: 40px 35px; display: flex; flex-direction: column; flex-grow: 1; }
+        .proj-card-meta-tag { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 15px; display: block; }
+        .proj-card-title { font-family: var(--font-display); font-size: 2.1rem; color: var(--text-main); margin-bottom: 15px; font-weight: 400; line-height: 1.2; }
+        
+        .proj-card-tags { display: flex; gap: 20px; margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted); font-weight: 400; }
+        .proj-card-tags span { display: inline-flex; align-items: center; gap: 6px; }
+        .proj-card-tags svg { width: 16px; height: 16px; fill: #9BA4A8; }
+        
+        .proj-card-desc { font-size: 0.98rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 30px; font-weight: 300; }
+        .proj-card-link { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-main); text-decoration: none; margin-top: auto; display: inline-flex; align-items: center; transition: var(--transition-fast); width: fit-content; }
+        .proj-card-link:hover { color: var(--accent); }
+        
+        .gallery-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #ECEEEF; color: var(--text-muted); text-align: center; font-family: var(--font-display); font-size: 1.3rem; padding: 20px; }
+        .gallery-placeholder svg { width: 40px; height: 40px; fill: var(--accent); margin-bottom: 10px; }
+
+        /* --- WHY CHOOSE US SECTION --- */
+        #why-choose-us { background-color: var(--bg-secondary); }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto; }
+        .why-card { background-color: var(--white); padding: 50px 40px; border-radius: 4px; transition: var(--transition-smooth); border: 1px solid rgba(0,0,0,0.02); }
+        .why-card .num { font-family: var(--font-display); font-size: 3.5rem; color: rgba(197, 168, 128, 0.3); display: block; margin-bottom: 20px; font-weight: 600; }
+        .why-card h3 { font-size: 1.6rem; margin-bottom: 15px; }
+        .why-card:hover { transform: translate3d(0, -8px, 0); box-shadow: 0 20px 40px rgba(0,0,0,0.04); }
+
+        /* --- IMMERSIVE INTERACTIVE ANIMATED MAP CONTAINER --- */
+        .map-interactive-wrapper { width: 100%; height: 100%; min-height: 480px; border-radius: 4px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06); }
+        .map-iframe-cover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(28,32,34,0.92) 0%, rgba(45,52,56,0.88) 100%); z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 40px; transition: var(--transition-smooth); cursor: pointer; }
+        .map-iframe-cover svg { width: 64px; height: 64px; fill: var(--accent); margin-bottom: 20px; transform: scale(1); transition: var(--transition-smooth); }
+        .map-iframe-cover h4 { color: var(--white); font-size: 1.8rem; margin-bottom: 10px; letter-spacing: 0.05em; }
+        .map-iframe-cover p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 25px; max-width: 320px; }
+        .map-interactive-wrapper:hover .map-iframe-cover svg { transform: scale(1.1) translateY(-5px); }
+        .map-interactive-wrapper:hover .map-iframe-cover { background: linear-gradient(135deg, rgba(197,168,128,0.95) 0%, rgba(28,32,34,0.9) 100%); }
+        
+        .map-action-pulse-btn { padding: 14px 28px; background: var(--white); color: var(--text-main); font-family: var(--font-body); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; border: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition-fast); }
+        .map-interactive-wrapper:hover .map-action-pulse-btn { background: var(--text-main); color: var(--white); }
+
+        /* --- THE JOURNEY TIMELINE --- */
+        #process { background-color: var(--bg-primary); position: relative; }
+        .timeline-wrapper { position: relative; max-width: 1200px; margin: 60px auto 0 auto; padding: 40px 0; }
+        .timeline-wrapper::before { content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: 100%; background-color: rgba(0, 0, 0, 0.05); transform: translateX(-50%); }
+        .timeline-progress-line { position: absolute; left: 50%; top: 0; width: 2px; background-color: var(--accent); transform: translateX(-50%); height: 0%; transition: height 0.5s ease-out; will-change: height; }
+        .timeline-item { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 80px; position: relative; }
+        .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+        .timeline-badge { width: 50px; height: 50px; border-radius: 50%; background-color: var(--white); border: 2px solid rgba(0, 0, 0, 0.05); position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; z-index: 2; transition: var(--transition-smooth); }
+        .timeline-badge svg { width: 20px; height: 20px; fill: var(--text-muted); transition: var(--transition-smooth); }
+        .timeline-item.active-node .timeline-badge { border-color: var(--accent); background-color: var(--text-main); }
+        .timeline-item.active-node .timeline-badge svg { fill: var(--accent); }
+        .timeline-panel { width: 45%; padding: 40px; background-color: var(--bg-secondary); border-radius: 4px; box-shadow: 0 5px 25px rgba(0,0,0,0.01); transition: var(--transition-smooth); }
+        .timeline-panel h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .timeline-panel .step-num { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 5px; }
+
+        /* --- CONVERSION & CONTACT ZONE --- */
+        #cta-bleed { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') no-repeat center center; background-size: cover; text-align: center; padding: 120px 20px; }
+        #cta-bleed h2 { color: var(--white); font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 35px; }
+        #cta-bleed .hero-ctas .btn-primary { background-color: var(--white); color: var(--text-main); }
+        #cta-bleed .hero-ctas .btn-primary:hover { background-color: var(--accent); color: var(--white); }
+        
+        #contact { background-color: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1600px; margin: 0 auto; }
+        .contact-card { background-color: var(--bg-secondary); padding: 60px; border-radius: 4px; }
+        .contact-card h3 { font-size: 2.2rem; margin-bottom: 40px; }
+        .contact-methods { display: flex; flex-direction: column; gap: 30px; }
+        .contact-method-item { display: flex; align-items: flex-start; gap: 20px; }
+        .contact-method-item svg { width: 24px; height: 24px; fill: var(--accent); margin-top: 4px; }
+        .contact-method-item div h4 { font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 5px; }
+        .contact-method-item div a, .contact-method-item div p { font-size: 1.2rem; color: var(--text-main); text-decoration: none; font-family: var(--font-display); transition: var(--transition-fast); }
+        .contact-method-item div a:hover { color: var(--accent); }
+
+        /* --- GLOBAL FOOTER --- */
+        footer { background-color: #0E1011; color: rgba(255,255,255,0.6); padding: 100px 8% 40px 8%; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; max-width: 1600px; margin: 0 auto 80px auto; }
+        .footer-brand .logo { color: var(--white) !important; display: block; margin-bottom: 25px; }
+        .footer-brand p { color: rgba(255,255,255,0.5); max-width: 320px; }
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 25px; font-weight: 600; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+        .footer-col ul a { color: rgba(255,255,255,0.5); text-decoration: none; transition: var(--transition-fast); }
+        .footer-col ul a:hover { color: var(--accent); padding-left: 5px; }
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-links a { width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; transition: var(--transition-fast); }
+        .social-links a svg { width: 18px; height: 18px; fill: var(--white); }
+        .social-links a:hover { background-color: var(--accent); }
+        .footer-base { max-width: 1600px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.8rem; }
+        .footer-base-links { display: flex; gap: 30px; }
+        .footer-base-links a { color: rgba(255,255,255,0.4); text-decoration: none; transition: var(--transition-fast); }
+        .footer-base-links a:hover { color: var(--accent); }
+
+        .mobile-sticky-cta { position: fixed; bottom: 20px; right: 20px; z-index: 999; background-color: var(--text-main); color: var(--white); padding: 14px 24px; border-radius: 30px; text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; border: 1px solid rgba(255,255,255,0.1); transition: var(--transition-fast); }
+        .mobile-sticky-cta:hover { background-color: var(--accent); }
+
+        /* --- RESPONSIVE SPECTRUM BREAKPOINTS --- */
+        @media(max-width: 1200px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .service-card:nth-child(1), .service-card:nth-child(2), .service-card:nth-child(3), .service-card:nth-child(4), .service-card:nth-child(5) { grid-column: span 1; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media(max-width: 992px) {
+            .section-padding { padding: 80px 6%; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-image { height: 450px; }
+            .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .burger { display: block; }
+            .nav-links { display: none; }
+            .timeline-wrapper::before, .timeline-progress-line { left: 40px; }
+            .timeline-item { flex-direction: row !important; margin-bottom: 50px; }
+            .timeline-panel { width: calc(100% - 80px); margin-left: auto; padding: 30px; }
+            .timeline-badge { left: 40px; }
+            .project-slider-track { padding-left: 6%; }
+            .project-slide-card { flex: 0 0 380px; }
+        }
+
+        @media(max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-ctas { flex-direction: column; align-items: center; width: 100%; }
+            .hero-ctas .btn { width: 100%; }
+            .mobile-sticky-cta { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="nav-progress" id="scroll-progress"></div>
+        <div class="nav-container">
+            <a href="#hero" class="logo" aria-label="KARNEL HOMES Home">KARNEL.</a>
+            <nav role="navigation" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#intro">What We Build</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
+    </header>
+
+    <ul class="nav-menu-mobile" id="mobile-menu">
+        <li><a href="#hero" class="mob-link">Home</a></li>
+        <li><a href="#about" class="mob-link">About Us</a></li>
+        <li><a href="#intro" class="mob-link">What We Build</a></li>
+        <li><a href="#portfolio" class="mob-link">Projects</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+
+    <main>
+        <!-- HERO SECTION (MID-SUNNY LUXURY VISUAL TREATMENT) -->
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-contrast-filter"></div>
+            <div class="hero-content">
+                <h1 class="reveal">Designed around how you think.<br>Built for life.</h1>
+                <p class="reveal reveal-delay-1">Architect-designed custom homes, built with clarity and care.</p>
+                <div class="hero-ctas reveal reveal-delay-2">
+                    <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+                    <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+            <button class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView();" aria-label="Scroll down to content">
+                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </button>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="section-padding">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Sandeep Singh luxury residential project showcase portfolio layout image" loading="lazy">
+                </div>
+                <div class="about-content reveal reveal-delay-1">
+                    <span class="founder-title">Meet the Founder</span>
+                    <h2>Sandeep Singh</h2>
+                    <p>A visionary leader in the premium luxury residential building business for the last 15 years, Sandeep Singh has been helping families bring their dream homes to reality across Sydney.</p>
+                    <p>Under his direct creative direction, KARNEL HOMES has delivered vast complex custom projects while upholding absolute integrity, spatial excellence, and world-class structural value. For more information regarding your architecture goals, remember we are always just one ring or an email away.</p>
+                    <div style="margin-top: 35px;">
+                        <a href="#contact" class="btn btn-primary">Connect Privately</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE BUILD INTRODUCTION -->
+        <section id="intro" class="section-padding">
+            <div class="intro-grid">
+                <div class="intro-text reveal">
+                    <h2>Bespoke Architectural Builders Across Sydney.</h2>
+                    <p>KARNEL HOMES specialises in bespoke new homes, knockdown rebuilds, duplexes and tailored residential projects across Sydney.</p>
+                    <p>We blend design sophistication with flawless craftsmanship, offering absolute clarity throughout your architectural journey.</p>
+                </div>
+                <div class="intro-img-wrapper reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Minimal luxury Sydney residential home front architecture view" loading="lazy" width="800" height="600">
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section-padding">
+            <div class="section-header reveal">
+                <h2>Our Building Services</h2>
+                <p>Crafting structures optimized for light, space, and premium materials.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80');"></div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 4.84l4.5 4.05v6.11h-2v-6H9.5v6h-2v-6.11L12 7.84z"/></svg>
+                    <h3>Custom Homes</h3>
+                    <p>Tailored masterworks uniquely designed to mirror individual spatial architectures.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');"></div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path d="M19 9.3V4h-3v2.6L12 3 2 12h3v8h5v-6h4v6h5v-8h3L19 9.3zM10 10H7V8h3v2zm7 6h-3v-2h3v2zm0-4h-3v-2h3v2z"/></svg>
+                    <h3>Double Storey Homes</h3>
+                    <p>Expansive multidimensional elevations maintaining balanced footprints.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80');"></div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zm6 0v7h3v-7h-3zM2 22h20v-2H2v2zm2-16l8-4 8 4v2H2V6z"/></svg>
+                    <h3>Granny Flats</h3>
+                    <p>Sophisticated structural self-contained units maximizing land yields.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80');"></div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 5.5l6 4.5v9H6v-9l6-4.5M12 3L4 9v12h16V9l-8-6z"/></svg>
+                    <h3>Single Storey Homes</h3>
+                    <p>Timeless linear floor plans accentuating organic seamless movement.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <!-- Clean, beautiful, human-free house facade for Knockdown & Rebuild -->
+                    <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');"></div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 2G6.5 2 2 6.5V18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6.5C22 2.5 17.5 2 12 2zm0 3c3.5 0 7 .4 7 1.5S15.5 8 12 8s-7-.4-7-1.5S8.5 5 12 5z"/></svg>
+                    <h3>Knockdown & Rebuild</h3>
+                    <p>Transforming current addresses into modern luxury spaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15 ARCHITECTURAL PROJECTS SLIDER CAROUSEL SECTION -->
+        <section id="portfolio" class="section-padding">
+            <div class="slider-control-container reveal">
+                <div>
+                    <h2 style="font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 5px;">Featured Architectural Works</h2>
+                    <p>Swipe or use arrows to view our portfolio across Sydney.</p>
+                </div>
+                <div class="slider-arrows">
+                    <button class="slider-arrow" id="slide-left-btn" aria-label="Slide portfolio left">
+                        <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                    </button>
+                    <button class="slider-arrow" id="slide-right-btn" aria-label="Slide portfolio right">
+                        <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Horizontal Slider Viewport -->
+            <div class="project-slider-viewport">
+                <div class="project-slider-track" id="project-slider-track">
+                    <!-- Dynamic collection mapping 15 objects from local images folder -->
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section id="why-choose-us" class="section-padding">
+            <div class="section-header reveal">
+                <h2>Why Choose KARNEL HOMES</h2>
+                <p>Engineering premium residential experiences built to endure generations.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <span class="num">01</span>
+                    <h3>Designed for Sydney Sites</h3>
+                    <p>Mastery of localized topographical levels, coastal exposure codes, and spatial zoning systems.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-1">
+                    <span class="num">02</span>
+                    <h3>Truly Custom Homes</h3>
+                    <p>Zero repetitive configurations. Every footprint starts from empty canvases matching clear client intent.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-2">
+                    <span class="num">03</span>
+                    <h3>Premium Builder Quality</h3>
+                    <p>Sourcing elite trade partners and architectural compounds guaranteeing immaculate aesthetics.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-3">
+                    <span class="num">04</span>
+                    <h3>A Smoother Process</h3>
+                    <p>Integrated milestone check-ins creating predictable, hyper-clear delivery vectors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONSTRUCTION TIMELINE -->
+        <section id="process" class="section-padding">
+            <div class="section-header reveal">
+                <h2>The Construction Journey</h2>
+                <p>A 10-step sequence engineered to guarantee certainty and execution clarity.</p>
+            </div>
+            <div class="timeline-wrapper">
+                <div class="timeline-progress-line" id="timeline-indicator"></div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 01</span> <h3>Initial Consultation</h3> <p>Discussing project visions, fundamental budget configurations, and structural expectations.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 02</span> <h3>Site Assessment</h3> <p>Comprehensive inspection analyzing solar aspect parameters, geotechnical variables, and easements.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zMA20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 03</span> <h3>Concept Design</h3> <p>Architectural layout drawings translating design targets into structural lines.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h14V5H5zm2 5h10v2H7v-2zm0 4h10v2H7v-2z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 04</span> <h3>Plan Refinement</h3> <p>Optimizing architectural drafts based on real-world space management adjustments.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 05</span> <h3>Tender & Pricing</h3> <p>Publishing fully comprehensive material cost metrics breakdowns with absolute pricing clarity.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 06</span> <h3>Contract Signing</h3> <p>Executing standard HIA contracts complete with defined milestones and timelines.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 07</span> <h3>Council Approvals</h3> <p>Managing DA submissions through local Sydney councils or CDC pathways seamlessly.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73A1.69 1.69 0 0 1 14 19.43l-.38 2.65c-.03.24-.24.42-.49.42h-4c-.25 0-.46-.18-.49-.42l-.38-2.65c-.61-.25-1.17-.59-1.69-.98l-2.49 1c-.23.09-.49 0-.61-.22l-2-3.46c-.12-.22-.07-.49.12-.64l2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 08</span> <h3>Material Selection</h3> <p>Guided internal styling curation mapping high-end finishes, stone, and architectural details.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M22 2H2v20h20V2zM4 6h16v12H4V6z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 09</span> <h3>Construction Phase</h3> <p>Active physical execution monitored closely via scheduled site safety structural audits.</p> </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge"><svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-14h-2v2h2V8zm0 4h-2v4h2v-4z"/></svg></div>
+                    <div class="timeline-panel"> <span class="step-num">Step 10</span> <h3>Handover</h3> <p>Final keys delivery together with formal execution certification documentation.</p> </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONVERSION BLEED ZONE -->
+        <section id="cta-bleed">
+            <div class="reveal">
+                <h2>Ready to build your dream home?</h2>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn btn-primary">Book Consultation</a>
+                    <a href="tel:0434289857" class="btn btn-secondary">Call Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT INTERFACE -->
+        <section id="contact" class="section-padding">
+            <div class="contact-grid">
+                <!-- High-Tech Animated Interaction Cover Component -->
+                <div class="map-interactive-wrapper reveal" id="animated-map-trigger">
+                    <div class="map-iframe-cover" id="map-cover-layer">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <h4>322 Abell Rd, Melonba</h4>
+                        <p>Click anywhere to launch instant navigation mapping metrics route directions.</p>
+                        <button class="map-action-pulse-btn">Open Google Maps</button>
+                    </div>
+                    <!-- Ambient Map Static Backdrop Frame Layer -->
+                    <iframe src="https://maps.google.com/maps?q=322%20Abell%20Road,%20Melonba%20NSW%202765&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height:480px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="contact-card reveal reveal-delay-1">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method-item">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:0434289857">0434 289 857</a>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@karnelhomes.com.au">info@karnelhomes.com.au</a>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <div>
+                                <h4>Head Office</h4>
+                                <p>322 Abell Road, Melonba NSW 2765</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">KARNEL.</a>
+                <p>Delivering high-performance architectural luxury custom homes and high-end residential engineering models throughout the greater Sydney landscape.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#intro">What We Build</a></li>
+                    <li><a href="#portfolio">Our Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Custom Homes</a></li>
+                    <li><a href="#services">Double Storey</a></li>
+                    <li><a href="#services">Knockdown Rebuild</a></li>
+                    <li><a href="#services">Granny Flats</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p style="font-size: 0.85rem; margin-bottom: 15px; color:rgba(255,255,255,0.4);">Stay updated with our latest architectural works.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow Karnel Homes on Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m6.4 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0m1.4-4.25a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Follow Karnel Homes on Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-base">
+            <p>&copy; 2026 KARNEL HOMES. All rights reserved. Built with pure clarity.</p>
+            <div class="footer-base-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#contact" class="mobile-sticky-cta">Consultation</a>
+
+    <!-- PERFORMANCE PLATFORM LOGIC APPLICATION SCRIPTS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // --- 15 CUSTOM OBJECTS DATA MATRIX ARRAY ---
+            const projectDataset = [
+                { id: 1, tag: "Project 01", title: "Modern Family Residence", loc: "Sydney NSW", type: "Custom Home", desc: "A stunning contemporary family home featuring open-plan living, premium finishes, and seamless indoor-outdoor flow." },
+                { id: 2, tag: "Project 02", title: "Urban Sanctuary Duplex", loc: "Melonba NSW", type: "Modern Terrace", desc: "Sleek geometric design structures configured cleanly to capture high ambient natural light across dual levels." },
+                { id: 3, tag: "Project 03", title: "The Minimalist Pavilion", loc: "Box Hill NSW", type: "Custom Home", desc: "An architectural statement balancing exposed organic concrete finishes with premium timber panel systems." },
+                { id: 4, tag: "Project 04", title: "Suburban Oasis Flat", loc: "Melonba NSW", type: "Granny Flat", desc: "A luxury secondary dwelling optimized fully for space management, comfort, and premium independent living." },
+                { id: 5, tag: "Project 05", title: "Lakeside Architectural Villa", loc: "Sydney NSW", type: "Double Storey", desc: "Panoramic glass frame system structures framing absolute bespoke luxury spaces built for generational durability." },
+                { id: 6, tag: "Project 06", title: "The Hamptons Residence", loc: "Cronulla NSW", type: "Custom Home", desc: "Timeless coastal lines paired delicately with modern high-contrast materiality panels." },
+                { id: 7, tag: "Project 07", title: "High-Yield Executive Studio", loc: "Melonba NSW", type: "Granny Flat", desc: "Sophisticated detached self-contained floorplans optimizing total land configurations smoothly." },
+                { id: 8, tag: "Project 08", title: "Contemporary Dual Living", loc: "Blacktown NSW", type: "Modern Duplex", desc: "Mirror architectural configurations built with flawless sound-insulated structural elements." },
+                { id: 9, tag: "Project 09", title: "The Linear Pavilion", loc: "Marsden Park NSW", type: "Single Storey", desc: "Expansive layout configurations accentuating organic light transitions directly from zero-clearance entries." },
+                { id: 10, tag: "Project 10", title: "Bespoke Metro Manor", loc: "Sydney NSW", type: "Double Storey", desc: "A masterwork home configured cleanly around indoor architectural courtyards and skylight systems." },
+                { id: 11, tag: "Project 11", title: "The Timber Ridge Pavilion", loc: "Penrith NSW", type: "Custom Home", desc: "Blending natural stone finishes with warm timber panels to craft a high-end editorial atmosphere." },
+                { id: 12, tag: "Project 12", title: "Western Horizon Estate", loc: "Melonba NSW", type: "Single Storey", desc: "A high-contrast modern layout built explicitly around lifestyle entertaining pools and outdoor pavilions." },
+                { id: 13, tag: "Project 13", title: "Azure Hills Estate", loc: "Sydney NSW", type: "Double Storey", desc: "Featuring elevated structural lines, custom stone masonry accents, and smart automation infrastructure." },
+                { id: 14, tag: "Project 14", title: "The Eco Sanctuary", loc: "Rouse Hill NSW", type: "Custom Home", desc: "High-performance home built with thermal mass concrete panel arrays and natural_cross-ventilation lines." },
+                { id: 15, tag: "Project 15", title: "Bespoke Family Estate", loc: "Melonba NSW", type: "Custom Home", desc: "Spacious multi-zoned residential masterpiece boasting exceptional integrated ceiling details." }
+            ];
+
+            // --- RENDER TIMELINE SLIDER ITEMS ---
+            const sliderTrack = document.getElementById("project-slider-track");
+            let trackHTML = "";
+
+            projectDataset.forEach((proj) => {
+                trackHTML += `
+                    <div class="project-slide-card">
+                        <div class="proj-card-img-wrap">
+                            <img src="/images/project${proj.id}.jpg" alt="${proj.title}" onerror="handleMissingSlide(this, '${proj.title}')" loading="lazy">
+                        </div>
+                        <div class="proj-card-details">
+                            <span class="proj-card-meta-tag">${proj.tag}</span>
+                            <h3 class="proj-card-title">${proj.title}</h3>
+                            <div class="proj-card-tags">
+                                <span>
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                    ${proj.loc}
+                                </span>
+                                <span>
+                                    <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                                    ${proj.type}
+                                </span>
+                            </div>
+                            <p class="proj-card-desc">${proj.desc}</p>
+                            <a href="#contact" class="proj-card-link">View Project &nbsp;&rarr;</a>
+                        </div>
+                    </div>
+                `;
+            });
+            sliderTrack.innerHTML = trackHTML;
+
+            // --- GRACEFUL ERROR HANDLING FOR CAROUSEL SLIDES ---
+            window.handleMissingSlide = (img, title) => {
+                img.parentElement.innerHTML = `
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                        <span style="font-size:0.9rem; font-weight:500;">${title}</span>
+                        <small style="font-size:0.7rem; opacity:0.5; margin-top:4px;">Place image inside /images/ folder</small>
+                    </div>
+                `;
+            };
+
+            // --- CAROUSEL SLIDER ENGINE IMPLEMENTATION ---
+            const btnLeft = document.getElementById("slide-left-btn");
+            const btnRight = document.getElementById("slide-right-btn");
+            let currentScrollOffset = 0;
+
+            const getMaxScrollOffset = () => {
+                return sliderTrack.scrollWidth - window.innerWidth + (window.innerWidth * 0.08);
+            };
+
+            const slideTrack = (direction) => {
+                const cardWidth = 520; 
+                currentScrollOffset += (direction * cardWidth);
+                
+                const maxScroll = getMaxScrollOffset();
+                if (currentScrollOffset < 0) currentScrollOffset = 0;
+                if (currentScrollOffset > maxScroll) currentScrollOffset = maxScroll;
+
+                sliderTrack.style.transform = `translate3d(-${currentScrollOffset}px, 0, 0)`;
+            };
+
+            btnRight.addEventListener("click", () => slideTrack(1));
+            btnLeft.addEventListener("click", () => slideTrack(-1));
+
+            // --- ANIMATIC GOOGLE MAP ROUTING EVENT HANDLER ---
+            const mapTrigger = document.getElementById("animated-map-trigger");
+            mapTrigger.addEventListener("click", () => {
+                const mapCover = document.getElementById("map-cover-layer");
+                mapCover.style.opacity = "0";
+                mapCover.style.pointerEvents = "none";
+                
+                setTimeout(() => {
+                    window.open("https://www.google.com/maps/place/322+Abell+Rd,+Melonba+NSW+2765/", "_blank");
+                }, 400);
+            });
+
+            // --- CORE GLOBAL INTERSECTION OBSERVER ---
+            const revealElements = document.querySelectorAll(".reveal");
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -40px 0px" };
+
+            const elementObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => elementObserver.observe(el));
+
+            // --- SCROLL ACTION HEADER PROGRESS & CLARITY SHIFT ---
+            const header = document.getElementById("main-header");
+            const scrollProgressBar = document.getElementById("scroll-progress");
+
+            window.addEventListener("scroll", () => {
+                const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalScroll > 0) {
+                    const scrolledPercentage = (window.scrollY / totalScroll) * 100;
+                    scrollProgressBar.style.width = `${scrolledPercentage}%`;
+                }
+                if (window.scrollY > 50) header.classList.add("scrolled");
+                else header.classList.remove("scrolled");
+            }, { passive: true });
+
+            // --- TIMELINE RUNTIME SPEED TRACKER ---
+            const processSection = document.getElementById("process");
+            const timelineIndicator = document.getElementById("timeline-indicator");
+            const timelineNodes = document.querySelectorAll(".timeline-item");
+
+            window.addEventListener("scroll", () => {
+                const sectionRect = processSection.getBoundingClientRect();
+                const currentVisibilityPosition = window.innerHeight - sectionRect.top;
+                
+                if (sectionRect.top < window.innerHeight && sectionRect.bottom > 0) {
+                    let pathProgressPercentage = (currentVisibilityPosition / (processSection.offsetHeight + window.innerHeight * 0.1)) * 100;
+                    pathProgressPercentage = Math.min(Math.max(pathProgressPercentage, 0), 100);
+                    timelineIndicator.style.height = `${pathProgressPercentage}%`;
+
+                    timelineNodes.forEach(node => {
+                        if (node.getBoundingClientRect().top < window.innerHeight * 0.7) {
+                            node.classList.add("active-node");
+                        } else {
+                            node.classList.remove("active-node");
+                        }
+                    });
+                }
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>
