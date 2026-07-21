@@ -189,7 +189,7 @@
         .nav-menu-mobile.open { right: 0; }
         .nav-menu-mobile a { font-family: var(--font-display); font-size: 2rem; text-decoration: none; color: var(--text-main); transition: var(--transition-fast); }
 
-        /* --- HERO SECTION (BRIGHT SUNNY EXTERIOR ARCHITECTURE) --- */
+        /* --- HERO SECTION --- */
         #hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; padding: 0 20px; }
         
         .hero-bg { 
@@ -198,7 +198,6 @@
             left: 0; 
             width: 100%; 
             height: 100%; 
-            /* Premium minimal sand plaster architecture exterior - bright & sunny summer light */
             background: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 100%), 
                         url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80') no-repeat center center; 
             background-size: cover; 
@@ -243,7 +242,7 @@
         .scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 3; animation: bounce 2s infinite; background: transparent; border: none; cursor: pointer; }
         .scroll-indicator svg { fill: var(--text-main); width: 30px; height: 30px; }
 
-        /* --- ABOUT US SECTION (SANDEEP SINGH) --- */
+        /* --- ABOUT US SECTION --- */
         #about { background-color: var(--bg-secondary); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1600px; margin: 0 auto; }
         .about-image { position: relative; overflow: hidden; height: 600px; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.04); }
@@ -279,7 +278,7 @@
         .service-card:hover .service-card-bg { transform: scale(1.06); }
         .service-card:hover p { transform: translate3d(0, 0, 0); opacity: 1; }
 
-        /* --- LUXURY 15-PROJECT SLIDER / CAROUSEL --- */
+        /* --- PORTFOLIO SLIDER --- */
         #portfolio { background-color: var(--bg-primary); position: relative; overflow: hidden; }
         .slider-control-container { display: flex; justify-content: space-between; align-items: center; max-width: 1600px; margin: 0 auto 40px auto; }
         .slider-arrows { display: flex; gap: 15px; }
@@ -321,7 +320,7 @@
         .why-card h3 { font-size: 1.6rem; margin-bottom: 15px; }
         .why-card:hover { transform: translate3d(0, -8px, 0); box-shadow: 0 20px 40px rgba(0,0,0,0.04); }
 
-        /* --- IMMERSIVE INTERACTIVE ANIMATED MAP CONTAINER --- */
+        /* --- INTERACTIVE MAP --- */
         .map-interactive-wrapper { width: 100%; height: 100%; min-height: 480px; border-radius: 4px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06); }
         .map-iframe-cover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(28,32,34,0.92) 0%, rgba(45,52,56,0.88) 100%); z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 40px; transition: var(--transition-smooth); cursor: pointer; }
         .map-iframe-cover svg { width: 64px; height: 64px; fill: var(--accent); margin-bottom: 20px; transform: scale(1); transition: var(--transition-smooth); }
@@ -333,7 +332,7 @@
         .map-action-pulse-btn { padding: 14px 28px; background: var(--white); color: var(--text-main); font-family: var(--font-body); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; border: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition-fast); }
         .map-interactive-wrapper:hover .map-action-pulse-btn { background: var(--text-main); color: var(--white); }
 
-        /* --- THE JOURNEY TIMELINE --- */
+        /* --- JOURNEY TIMELINE --- */
         #process { background-color: var(--bg-primary); position: relative; }
         .timeline-wrapper { position: relative; max-width: 1200px; margin: 60px auto 0 auto; padding: 40px 0; }
         .timeline-wrapper::before { content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: 100%; background-color: rgba(0, 0, 0, 0.05); transform: translateX(-50%); }
@@ -348,43 +347,57 @@
         .timeline-panel h3 { font-size: 1.5rem; margin-bottom: 10px; }
         .timeline-panel .step-num { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 5px; }
 
-        /* --- CONVERSION & CONTACT ZONE --- */
-    #cta-bleed { 
-    position: relative;
-    background-color: #1C2022; /* Fallback elegant background color */
-    text-align: center; 
-    padding: 120px 20px; 
-    overflow: hidden;
-}
-#cta-bleed h2 { color: var(--white); font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 35px; position: relative; z-index: 2; }
-#cta-bleed .hero-ctas { position: relative; z-index: 2; }
-#cta-bleed .hero-ctas .btn-primary { background-color: var(--white); color: var(--text-main); }
-#cta-bleed .hero-ctas .btn-primary:hover { background-color: var(--accent); color: var(--white); }
+        /* --- IMMERSIVE CORE CTA BLEED ZONE --- */
+        #cta-bleed { 
+            position: relative;
+            background-color: #171a1c;
+            text-align: center; 
+            padding: 140px 20px; 
+            overflow: hidden;
+        }
+        #cta-bleed h2 { color: var(--white); font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 35px; position: relative; z-index: 5; }
+        #cta-bleed .hero-ctas { position: relative; z-index: 5; }
+        #cta-bleed .hero-ctas .btn-primary { background-color: var(--white); color: var(--text-main); }
+        #cta-bleed .hero-ctas .btn-primary:hover { background-color: var(--accent); color: var(--white); }
+        #cta-bleed .hero-ctas .btn-secondary { color: var(--white); border-color: var(--white); background: rgba(255,255,255,0.1); }
+        #cta-bleed .hero-ctas .btn-secondary:hover { background: var(--white); color: var(--text-main); }
 
-/* The isolated background canvas */
-#sandCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-    object-fit: cover;
-}
+        /* Clean Vector Sand Disorientation Backdrop Layer */
+        .sand-grain-layer {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .sand-base-image {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/harbour image.png') no-repeat center center;
+            background-size: cover;
+            animation: sandMeltLoop 16s ease-in-out infinite alternate;
+            will-change: transform, filter, opacity;
+        }
+        .sand-noise-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.18;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3联%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            animation: sandStormMotion 0.8s steps(4) infinite;
+        }
 
-/* The new canvas wrapper styling */
-#cta-bleed canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-        @keyframes sandDrift {
-    0% { background-position: 0px center; }
-    100% { background-position: -1920px center; }
-}
+        @keyframes sandMeltLoop {
+            0% { transform: scale(1); filter: blur(0px) contrast(1) brightness(1); opacity: 1; }
+            35% { transform: scale(1.02); filter: blur(2px) contrast(1.1) brightness(1.05); opacity: 0.95; }
+            55% { transform: scale(1.12) translate3d(20px, -10px, 0); filter: blur(25px) contrast(1.5) brightness(1.3); opacity: 0.25; }
+            75% { transform: scale(1.25) translate3d(-30px, 15px, 0); filter: blur(40px) contrast(1.8) brightness(0.7); opacity: 0.08; }
+            100% { transform: scale(1.35) translate3d(40px, -20px, 0); filter: blur(65px) contrast(2) brightness(0.3); opacity: 0; }
+        }
+        @keyframes sandStormMotion {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(15px, -15px, 0); }
+        }
+        
+        /* --- CONTACT INTERFACE --- */
         #contact { background-color: var(--white); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1600px; margin: 0 auto; }
         .contact-card { background-color: var(--bg-secondary); padding: 60px; border-radius: 4px; }
@@ -417,7 +430,7 @@
         .mobile-sticky-cta { position: fixed; bottom: 20px; right: 20px; z-index: 999; background-color: var(--text-main); color: var(--white); padding: 14px 24px; border-radius: 30px; text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; border: 1px solid rgba(255,255,255,0.1); transition: var(--transition-fast); }
         .mobile-sticky-cta:hover { background-color: var(--accent); }
 
-        /* --- RESPONSIVE SPECTRUM BREAKPOINTS --- */
+        /* --- BREAKPOINTS --- */
         @media(max-width: 1200px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .service-card:nth-child(1), .service-card:nth-child(2), .service-card:nth-child(3), .service-card:nth-child(4), .service-card:nth-child(5) { grid-column: span 1; }
@@ -456,7 +469,7 @@
     <header id="main-header">
         <div class="nav-progress" id="scroll-progress"></div>
         <div class="nav-container">
-            <a href="#hero" class="logo" aria-label="KARNEL HOMES Home">KARNEL</a>
+            <a href="#hero" class="logo" aria-label="KARNEL HOMES Home">KARNEL.</a>
             <nav role="navigation" aria-label="Main Navigation">
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
@@ -483,7 +496,7 @@
     </ul>
 
     <main>
-        <!-- HERO SECTION (MID-SUNNY LUXURY VISUAL TREATMENT) -->
+        <!-- HERO SECTION -->
         <section id="hero">
             <div class="hero-bg"></div>
             <div class="hero-contrast-filter"></div>
@@ -564,7 +577,6 @@
                     <p>Timeless linear floor plans accentuating organic seamless movement.</p>
                 </div>
                 <div class="service-card reveal reveal-delay-2">
-                    <!-- Clean, beautiful, human-free house facade for Knockdown & Rebuild -->
                     <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');"></div>
                     <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 2G6.5 2 2 6.5V18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6.5C22 2.5 17.5 2 12 2zm0 3c3.5 0 7 .4 7 1.5S15.5 8 12 8s-7-.4-7-1.5S8.5 5 12 5z"/></svg>
                     <h3>Knockdown & Rebuild</h3>
@@ -573,7 +585,7 @@
             </div>
         </section>
 
-        <!-- 15 ARCHITECTURAL PROJECTS SLIDER CAROUSEL SECTION -->
+        <!-- ARCHITECTURAL PROJECTS SLIDER -->
         <section id="portfolio" class="section-padding">
             <div class="slider-control-container reveal">
                 <div>
@@ -590,10 +602,9 @@
                 </div>
             </div>
 
-            <!-- Dynamic Horizontal Slider Viewport -->
             <div class="project-slider-viewport">
                 <div class="project-slider-track" id="project-slider-track">
-                    <!-- Dynamic collection mapping 15 objects from local images folder -->
+                    <!-- Loaded dynamically via JavaScript layout loop array -->
                 </div>
             </div>
         </section>
@@ -680,9 +691,12 @@
             </div>
         </section>
 
-        <!-- CONVERSION BLEED ZONE -->
+        <!-- CONVERSION BLEED ZONE (SAND GRAIN DISORIENTATION INTERFACE) -->
         <section id="cta-bleed">
-            <canvas id="sandCanvas"></canvas>
+            <div class="sand-grain-layer">
+                <div class="sand-base-image"></div>
+                <div class="sand-noise-overlay"></div>
+            </div>
             <div class="reveal">
                 <h2>Ready to build your dream home?</h2>
                 <div class="hero-ctas">
@@ -695,7 +709,6 @@
         <!-- CONTACT INTERFACE -->
         <section id="contact" class="section-padding">
             <div class="contact-grid">
-                <!-- High-Tech Animated Interaction Cover Component -->
                 <div class="map-interactive-wrapper reveal" id="animated-map-trigger">
                     <div class="map-iframe-cover" id="map-cover-layer">
                         <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -703,7 +716,6 @@
                         <p>Click anywhere to launch instant navigation mapping metrics route directions.</p>
                         <button class="map-action-pulse-btn">Open Google Maps</button>
                     </div>
-                    <!-- Ambient Map Static Backdrop Frame Layer -->
                     <iframe src="https://maps.google.com/maps?q=322%20Abell%20Road,%20Melonba%20NSW%202765&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height:480px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 
@@ -786,26 +798,26 @@
 
     <a href="#contact" class="mobile-sticky-cta">Consultation</a>
 
-    <!-- PERFORMANCE PLATFORM LOGIC APPLICATION SCRIPTS -->
+    <!-- SYSTEM PLATFORM LOGIC SCRIPTS -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
-            // --- 15 CUSTOM OBJECTS DATA MATRIX ARRAY ---
+            // --- PROJECTS DATA MATRIX ---
             const projectDataset = [
-                { id: 1, tag: "Project 01", title: "Modern Family Residence", loc: "North Kellyville NSW", type: "Custom Home", desc: "A stunning contemporary family home featuring open-plan living, premium finishes, and seamless indoor-outdoor flow." },
-                { id: 2, tag: "Project 02", title: "Urban Sanctuary Duplex", loc: "Glenfield NSW", type: "Modern Terrace", desc: "Sleek geometric design structures configured cleanly to capture high ambient natural light across dual levels." },
-                { id: 3, tag: "Project 03", title: "The Minimalist Pavilion", loc: "Oran Park NSW", type: "Custom Home", desc: "An architectural statement balancing exposed organic concrete finishes with premium timber panel systems." },
-                { id: 4, tag: "Project 04", title: "Suburban Oasis Flat", loc: "Mequarie Fields NSW", type: "Custom Home", desc: "A luxury secondary dwelling optimized fully for space management, comfort, and premium independent living." },
-                { id: 5, tag: "Project 05", title: "Modern Bushland Sanctuary", loc: "Melonba NSW", type: "Double Storey", desc: "Panoramic glass frame system structures framing absolute bespoke luxury spaces built for generational durability." },
-                { id: 6, tag: "Project 06", title: "The Hamptons Residence", loc: "Melonba NSW", type: "Custom Home", desc: "Timeless coastal lines paired delicately with modern high-contrast materiality panels." },
-                { id: 7, tag: "Project 07", title: "High-Yield Executive Studio", loc: "Catherine Field NSW", type: "Modern Duplex", desc: "Sophisticated detached self-contained floorplans optimizing total land configurations smoothly." },
-                { id: 8, tag: "Project 08", title: "Contemporary Dual Living", loc: "Austral NSW", type: "Modern Duplex", desc: "Mirror architectural configurations built with flawless sound-insulated structural elements." },
+                { id: 1, tag: "Project 01", title: "Modern Family Residence", loc: "Sydney NSW", type: "Custom Home", desc: "A stunning contemporary family home featuring open-plan living, premium finishes, and seamless indoor-outdoor flow." },
+                { id: 2, tag: "Project 02", title: "Urban Sanctuary Duplex", loc: "Melonba NSW", type: "Modern Terrace", desc: "Sleek geometric design structures configured cleanly to capture high ambient natural light across dual levels." },
+                { id: 3, tag: "Project 03", title: "The Minimalist Pavilion", loc: "Box Hill NSW", type: "Custom Home", desc: "An architectural statement balancing exposed organic concrete finishes with premium timber panel systems." },
+                { id: 4, tag: "Project 04", title: "Suburban Oasis Flat", loc: "Melonba NSW", type: "Granny Flat", desc: "A luxury secondary dwelling optimized fully for space management, comfort, and premium independent living." },
+                { id: 5, tag: "Project 05", title: "Lakeside Architectural Villa", loc: "Sydney NSW", type: "Double Storey", desc: "Panoramic glass frame system structures framing absolute bespoke luxury spaces built for generational durability." },
+                { id: 6, tag: "Project 06", title: "The Hamptons Residence", loc: "Cronulla NSW", type: "Custom Home", desc: "Timeless coastal lines paired delicately with modern high-contrast materiality panels." },
+                { id: 7, tag: "Project 07", title: "High-Yield Executive Studio", loc: "Melonba NSW", type: "Granny Flat", desc: "Sophisticated detached self-contained floorplans optimizing total land configurations smoothly." },
+                { id: 8, tag: "Project 08", title: "Contemporary Dual Living", loc: "Blacktown NSW", type: "Modern Duplex", desc: "Mirror architectural configurations built with flawless sound-insulated structural elements." },
                 { id: 9, tag: "Project 09", title: "The Linear Pavilion", loc: "Marsden Park NSW", type: "Single Storey", desc: "Expansive layout configurations accentuating organic light transitions directly from zero-clearance entries." },
                 { id: 10, tag: "Project 10", title: "Bespoke Metro Manor", loc: "Sydney NSW", type: "Double Storey", desc: "A masterwork home configured cleanly around indoor architectural courtyards and skylight systems." },
                 { id: 11, tag: "Project 11", title: "The Timber Ridge Pavilion", loc: "Penrith NSW", type: "Custom Home", desc: "Blending natural stone finishes with warm timber panels to craft a high-end editorial atmosphere." },
-                { id: 12, tag: "Project 12", title: "Western Horizon Estate", loc: "Melonba NSW", type: "Custom Home", desc: "A high-contrast modern layout built explicitly around lifestyle entertaining pools and outdoor pavilions." },
+                { id: 12, tag: "Project 12", title: "Western Horizon Estate", loc: "Melonba NSW", type: "Single Storey", desc: "A high-contrast modern layout built explicitly around lifestyle entertaining pools and outdoor pavilions." },
                 { id: 13, tag: "Project 13", title: "Azure Hills Estate", loc: "Sydney NSW", type: "Double Storey", desc: "Featuring elevated structural lines, custom stone masonry accents, and smart automation infrastructure." },
-                { id: 14, tag: "Project 14", title: "The Eco Sanctuary", loc: "Rouse Hill NSW", type: "Custom Home", desc: "High-performance home built with thermal mass concrete panel arrays and natural_cross-ventilation lines." },
+                { id: 14, tag: "Project 14", title: "The Eco Sanctuary", loc: "Rouse Hill NSW", type: "Custom Home", desc: "High-performance home built with thermal mass concrete panel arrays and natural cross-ventilation lines." },
                 { id: 15, tag: "Project 15", title: "Bespoke Family Estate", loc: "Melonba NSW", type: "Custom Home", desc: "Spacious multi-zoned residential masterpiece boasting exceptional integrated ceiling details." }
             ];
 
@@ -851,7 +863,7 @@
                 `;
             };
 
-            // --- CAROUSEL SLIDER ENGINE IMPLEMENTATION ---
+            // --- CAROUSEL SLIDER ENGINE ---
             const btnLeft = document.getElementById("slide-left-btn");
             const btnRight = document.getElementById("slide-right-btn");
             let currentScrollOffset = 0;
@@ -874,7 +886,7 @@
             btnRight.addEventListener("click", () => slideTrack(1));
             btnLeft.addEventListener("click", () => slideTrack(-1));
 
-            // --- ANIMATIC GOOGLE MAP ROUTING EVENT HANDLER ---
+            // --- GOOGLE MAP ROUTING EVENT HANDLER ---
             const mapTrigger = document.getElementById("animated-map-trigger");
             mapTrigger.addEventListener("click", () => {
                 const mapCover = document.getElementById("map-cover-layer");
@@ -901,7 +913,7 @@
 
             revealElements.forEach(el => elementObserver.observe(el));
 
-            // --- SCROLL ACTION HEADER PROGRESS & CLARITY SHIFT ---
+            // --- SCROLL ACTION HEADER PROGRESS ---
             const header = document.getElementById("main-header");
             const scrollProgressBar = document.getElementById("scroll-progress");
 
@@ -915,7 +927,7 @@
                 else header.classList.remove("scrolled");
             }, { passive: true });
 
-            // --- TIMELINE RUNTIME SPEED TRACKER ---
+            // --- TIMELINE TRACKER ---
             const processSection = document.getElementById("process");
             const timelineIndicator = document.getElementById("timeline-indicator");
             const timelineNodes = document.querySelectorAll(".timeline-item");
@@ -938,201 +950,24 @@
                     });
                 }
             }, { passive: true });
+
+            // --- MOBILE MENU TOGGLE ---
+            const burger = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobLinks = document.querySelectorAll(".mob-link");
+
+            burger.addEventListener("click", () => {
+                const isOpen = mobileMenu.classList.toggle("open");
+                burger.setAttribute("aria-expanded", isOpen);
+            });
+
+            mobLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.remove("open");
+                    burger.setAttribute("aria-expanded", "false");
+                });
+            });
         });
-        // --- SAND PARTICLE DISINTEGRATION ENGINE ---
-const canvas = document.getElementById("sandCanvas");
-const ctx = canvas.getContext("2d", { willReadFrequently: true });
-const container = document.getElementById("cta-bleed");
-
-let particles = [];
-let img = new Image();
-img.src = 'images/harbour image.png'; 
-
-function resizeCanvas() {
-    canvas.width = container.offsetWidth;
-    canvas.height = container.offsetHeight;
-}
-
-img.onload = function() {
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    initParticles();
-    animateParticles();
-};
-
-class Particle {
-    constructor(x, y, color) {
-        this.originX = x;
-        this.originY = y;
-        this.x = x;
-        this.y = y;
-        this.color = color;
-        // Randomize dispersal trajectory vectors (sand storm effect)
-        this.vx = (Math.random() - 0.5) * 4 + 2; // Bias slightly to the right like wind
-        this.vy = (Math.random() - 0.5) * 2;
-        this.alpha = 1;
-    }
-    
-    update(progress) {
-        // progress goes from 0 to 1 (solid image), then 1 to 2 (dispersed sand)
-        if (progress <= 1) {
-            // Re-forming stage: interpolate back to original positions
-            this.x = this.originX + (this.vx * 100) * (1 - progress);
-            this.y = this.originY + (this.vy * 100) * (1 - progress);
-        } else {
-            // Disintegrating stage: blow away into sand grains
-            let p = progress - 1;
-            this.x = this.originX + (this.vx * 100) * p;
-            this.y = this.originY + (this.vy * 100) * p;
-        }
-    }
-    
-    draw() {
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, 2, 2); // 2x2px sand grains
-    }
-}
-
-function initParticles() {
-    // Render hidden image onto canvas temporary vector bounds to sample pixels
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    
-    // Apply a 40% dark overlay color data to match original design tint
-    ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // Sample every 6th pixel horizontally and vertically to keep performance crisp
-    const skip = 6; 
-    for (let y = 0; y < canvas.height; y += skip) {
-        for (let x = 0; x < canvas.width; x += skip) {
-            const index = (y * canvas.width + x) * 4;
-            const r = imgData[index];
-            const g = imgData[index + 1];
-            const b = imgData[index + 2];
-            const a = imgData[index + 3];
-            
-            if (a > 0) {
-                particles.push(new Particle(x, y, `rgb(${r},${g},${b})`));
-            }
-        }
-    }
-}
-
-let time = 0;
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // Creates a cycling loop using Math.sin to transition nicely
-    // 0 = complete image, 1 = maximum sand disorientation
-    time += 0.005; 
-    let cycle = (Math.sin(time) + 1) / 2; // Normalizes value strictly between 0 and 1
-    
-    // Map cycle value to progress steps (0 to 2 range target)
-    let progress = cycle * 2; 
-
-    for (let i = 0; i < particles.length; i++) {
-        particles[i].update(progress);
-        particles[i].draw();
-    }
-    
-    requestAnimationFrame(animateParticles);
-}
-        <!-- ISOLATED SAND GRAIN VISUAL ENGINE -->
-<script>
-(function() {
-    const canvas = document.getElementById("sandCanvas");
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d", { willReadFrequently: true });
-    const container = document.getElementById("cta-bleed");
-    
-    let particles = [];
-    let img = new Image();
-    img.src = 'images/harbour image.png'; 
-
-    function resizeCanvas() {
-        canvas.width = container.offsetWidth;
-        canvas.height = container.offsetHeight;
-    }
-
-    img.onload = function() {
-        resizeCanvas();
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            initParticles();
-        });
-        initParticles();
-        animateParticles();
-    };
-
-    class SandParticle {
-        constructor(x, y, color) {
-            this.originX = x;
-            this.originY = y;
-            this.x = x;
-            this.y = y;
-            this.color = color;
-            this.vx = (Math.random() - 0.3) * 5; // Blows gracefully sideways
-            this.vy = (Math.random() - 0.5) * 3;
-        }
-        update(progress) {
-            // Smoothly dissolve out and back together using linear interpolation
-            this.x = this.originX + (this.vx * 40) * progress;
-            this.y = this.originY + (this.vy * 40) * progress;
-        }
-        draw() {
-            ctx.fillStyle = this.color;
-            ctx.fillRect(this.x, this.y, 2, 2); // 2px micro sand grains
-        }
-    }
-
-    function initParticles() {
-        particles = [];
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        
-        // Add a built-in 40% dark overlay layer to keep text readable
-        ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        // Skip pixels systematically to maintain 60 FPS performance
-        const skip = 5; 
-        for (let y = 0; y < canvas.height; y += skip) {
-            for (let x = 0; x < canvas.width; x += skip) {
-                const index = (y * canvas.width + x) * 4;
-                if (imgData[index + 3] > 0) {
-                    particles.push(new SandParticle(
-                        x, y, 
-                        `rgba(${imgData[index]},${imgData[index+1]},${imgData[index+2]},0.85)`
-                    ));
-                }
-            }
-        }
-    }
-
-    let time = 0;
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        time += 0.015; // Speed of the loop cycle
-        let progress = (Math.sin(time) + 1) / 2; // Bounces perfectly between 0 (solid) and 1 (scattered sand)
-
-        // Add an extra ease curve so the image stays whole for a second before turning back into sand
-        let easedProgress = Math.pow(progress, 3); 
-
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update(easedProgress);
-            particles[i].draw();
-        }
-        
-        requestAnimationFrame(animateParticles);
-    }
-})();
-</script>
     </script>
 </body>
 </html>
